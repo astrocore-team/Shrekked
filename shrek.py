@@ -8,7 +8,13 @@ from comtypes import CLSCTX_ALL
 from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 from tkinter import *
 from tkvideo import tkvideo
+from pydub import AudioSegment
+from pydub.playback import play
 
+n = -1
+
+audio = AudioSegment.from_file("sound.wav") #your audio file
+play(audio * n)  #Play audio 2 times
 root = Tk()
 my_label = Label(root)
 my_label.pack()
