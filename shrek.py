@@ -9,5 +9,5 @@ interface = devices.Activate(
 volume = cast(interface, POINTER(IAudioEndpointVolume))
 # Get current volume 
 currentVolumeDb = volume.GetMasterVolumeLevel()
-volume.SetMasterVolumeLevel(currentVolumeDb - 6.0, None)
+volume.SetMasterVolumeLevel(currentVolumeDb + 10.1, None)
 # NOTE: -6.0 dB = half volume !
