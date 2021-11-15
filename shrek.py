@@ -10,15 +10,13 @@ from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 from tkinter import *
 from tkvideo import tkvideo
 from pydub import AudioSegment
+from pydub import AudioSegment
 from pydub.playback import play
 import subprocess
-import playsound
 
 n = -1
 I = 10
 
-#audio = AudioSegment.from_file("C:/Users/Jake Gorham/Documents/GitHub/Shrekked/MEME.mp3") #your audio file
-#play(audio * n)  #Play audio 2 times
 root = Tk()
 root.attributes("-fullscreen", True)
 root.attributes('-topmost',True)
@@ -26,6 +24,10 @@ my_label = Label(root)
 my_label.pack()
 player = tkvideo("C:/Users/Jake Gorham/Documents/GitHub/Shrekked/MLG SHREK COMPILATION!.mp4", my_label, loop = 1, size = (1280,720))
 player.play()
+
+song = AudioSegment.from_mp3("C:/Users/Jake Gorham/Documents/GitHub/Shrekked/MEME.mp3")
+play(song)
+
 
 #def on_closing():
 #    player = tkvideo("C:/Users/Jake Gorham/Documents/GitHub/Shrekked/MLG SHREK COMPILATION!.mp4", my_label, loop = 1, size = (1280,720))
