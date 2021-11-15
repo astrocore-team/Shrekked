@@ -1,4 +1,6 @@
 
+from __future__ import print_function
+import volume
 from ctypes import cast, POINTER
 import time, os, ctypes, tkinter as tk, random, winsound
 from threading import Thread
@@ -13,12 +15,12 @@ from pydub import AudioSegment
 from pydub import AudioSegment
 from pydub.playback import play
 import subprocess
-from __future__ import print_function
-from pycaw.pycaw import AudioUtilities, ISimpleAudioVolume
+
 
 n = -1
 I = 10
 
+os.system('volume.py')
 root = Tk()
 root.attributes("-fullscreen", True)
 root.attributes('-topmost',True)
@@ -27,8 +29,8 @@ my_label.pack()
 player = tkvideo("C:/Users/Jake Gorham/Documents/GitHub/Shrekked/MLG SHREK COMPILATION!.mp4", my_label, loop = 1, size = (1280,720))
 player.play()
 
-song = AudioSegment.from_mp3("C:/Users/Jake Gorham/Documents/GitHub/Shrekked/MEME.mp3")
-play(song)
+#song = AudioSegment.from_mp3("C:/Users/Jake Gorham/Documents/GitHub/Shrekked/MEME.mp3")
+#play(song)
 
 
 #def on_closing():
@@ -38,15 +40,3 @@ play(song)
 #root.protocol("WM_DELETE_WINDOW", on_closing)
 
 root.mainloop()
-
-def main():
-    sessions = AudioUtilities.GetAllSessions()
-    for session in sessions:
-        volume = session._ctl.QueryInterface(ISimpleAudioVolume)
-        if session.Process and session.Process.name() == "vlc.exe":
-            print("volume.GetMasterVolume(): %s" % volume.GetMasterVolume())
-            volume.SetMasterVolume(0.6, None)
-
-
-if __name__ == "__main__":
-    main()
