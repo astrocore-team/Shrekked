@@ -14,13 +14,14 @@ from pydub.playback import play
 
 n = -1
 
-audio = AudioSegment.from_file("sound.wav") #your audio file
-play(audio * n)  #Play audio 2 times
+#audio = AudioSegment.from_file("C:/Users/Jake Gorham/Documents/GitHub/Shrekked/MEME.mp3") #your audio file
+#play(audio * n)  #Play audio 2 times
 root = Tk()
 my_label = Label(root)
 my_label.pack()
-player = tkvideo("C:/Users/jake2/Documents/GitHub\Shrekked/MLG SHREK COMPILATION!.MP4", my_label, loop = 1, size = (1280,720))
+player = tkvideo("C:/Users/Jake Gorham\/Documents/GitHub/Shrekked/MLG SHREK COMPILATION!.mp4", my_label, loop = 1, size = (1280,720))
 player.play()
+
 root.mainloop()
 
 import subprocess
