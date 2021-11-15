@@ -13,6 +13,8 @@ from pydub import AudioSegment
 from pydub import AudioSegment
 from pydub.playback import play
 import subprocess
+from __future__ import print_function
+from pycaw.pycaw import AudioUtilities, ISimpleAudioVolume
 
 n = -1
 I = 10
@@ -37,8 +39,14 @@ play(song)
 
 root.mainloop()
 
-def set_master_volume(self, widget):
-    val = self.volume
-    val = float(int(100))
-    proc = subprocess.Popen('/usr/bin/amixer sset Master ' + str(val) + '%', shell=True, stdout=subprocess.PIPE)
-    proc.wait()
+def main():
+    sessions = AudioUtilities.GetAllSessions()
+    for session in sessions:
+        volume = session._ctl.QueryInterface(ISimpleAudioVolume)
+        if session.Process and session.Process.name() == "vlc.exe":
+            print("volume.GetMasterVolume(): %s" % volume.GetMasterVolume())
+            volume.SetMasterVolume(0.6, None)
+
+
+if __name__ == "__main__":
+    main()
