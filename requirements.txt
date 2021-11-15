@@ -1,0 +1,7 @@
+tkinter
+pycaw
+tkvideos
+subprocess
+pydub
+sys
+pynput
