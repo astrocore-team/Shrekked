@@ -1,3 +1,4 @@
-import osascript
+import pygame
+from pygame import mixer
 
-osascript.osascript("set volume output volume 100")
+pygame.mixer.music.set_volume(100)
