@@ -12,6 +12,7 @@ from tkvideo import tkvideo
 from pydub import AudioSegment
 from pydub.playback import play
 import subprocess
+import playsound
 
 n = -1
 I = 10
@@ -26,11 +27,11 @@ my_label.pack()
 player = tkvideo("C:/Users/Jake Gorham/Documents/GitHub/Shrekked/MLG SHREK COMPILATION!.mp4", my_label, loop = 1, size = (1280,720))
 player.play()
 
-def on_closing():
-    player = tkvideo("C:/Users/Jake Gorham/Documents/GitHub/Shrekked/MLG SHREK COMPILATION!.mp4", my_label, loop = 1, size = (1280,720))
-    player.play()
+#def on_closing():
+#    player = tkvideo("C:/Users/Jake Gorham/Documents/GitHub/Shrekked/MLG SHREK COMPILATION!.mp4", my_label, loop = 1, size = (1280,720))
+#    player.play()
 
-root.protocol("WM_DELETE_WINDOW", on_closing)
+#root.protocol("WM_DELETE_WINDOW", on_closing)
 
 root.mainloop()
 
