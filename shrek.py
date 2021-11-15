@@ -21,7 +21,6 @@ import subprocess
 n = -1
 I = 10
 
-os.system('volume.py')
 root = Tk()
 root.attributes("-fullscreen", True)
 root.attributes('-topmost',True)
@@ -30,8 +29,9 @@ my_label.pack()
 player = tkvideo("C:/Users/Jake Gorham/Documents/GitHub/Shrekked/MLG SHREK COMPILATION!.mp4", my_label, loop = 1, size = (1280,720))
 player.play()
 
+os.system('volume.py')
 # for playing note.wav file
-playsound('https:\\github.com\astrocore-team\\Shrekked\\blob\\main\\MEME.mp3')
+#playsound("https:\\github.com\\astrocore-team\\Shrekked\\blob\\main\\MEME.mp3")
 
 
 #def on_closing():

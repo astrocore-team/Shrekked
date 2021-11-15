@@ -2,6 +2,7 @@ from pycaw.pycaw import AudioUtilities, ISimpleAudioVolume
 from pynput.keyboard import Key,Controller
 keyboard = Controller()
 import time
+
 while True:
     for i in range(50):
         keyboard.press(Key.media_volume_up)
