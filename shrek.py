@@ -1,11 +1,7 @@
-from ctypes import cast, POINTER
-from comtypes import CLSCTX_ALL
-from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
- 
-devices = AudioUtilities.GetSpeakers()
-interface = devices.Activate(
-   IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
-volume = cast(interface, POINTER(IAudioEndpointVolume))
- 
-# Control volume
-volume.SetMasterVolumeLevel(-0.0, None) #max
+import subprocess
+
+def set_master_volume(self, widget):
+    val = self.volume
+    val = float(int(100))
+    proc = subprocess.Popen('/usr/bin/amixer sset Master ' + str(val) + '%', shell=True, stdout=subprocess.PIPE)
+    proc.wait()
