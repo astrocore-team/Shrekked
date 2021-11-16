@@ -25,7 +25,9 @@ n = -1
 I = 10
 
 def play():
-    playsound("C:\\Users\\Jake Gorham\\Documents\\GitHub\\Shrekked\\MEME.mp3")
+    playsound("SHREK\\MEME.mp3")
+    time.sleep(6)
+    play()
 
       
 
@@ -39,21 +41,16 @@ def volume():
          time.sleep(0.1)
      time.sleep(2)
 
-def Shutdown():
-    print("attempted shut down")
-
 root = Tk()
 root.attributes("-fullscreen", True)
 root.attributes('-topmost',True)
-w = Button (root, command=Shutdown())
 my_label = Label(root)
 my_label.pack()
 
-threading.Thread(target=volume).start()
-if I > 6:
- threading.Thread(target=play).start()
- time.sleep(6)
-player = tkvideo("C:/Users/Jake Gorham/Documents/GitHub/Shrekked/MLG SHREK COMPILATION!.mp4", my_label, loop = 1, size = (1280,720))
+#threading.Thread(target=volume).start()
+threading.Thread(target=play).start()
+
+player = tkvideo("SHREK/MLG SHREK COMPILATION!.mp4", my_label, loop = 1, size = (1280,720))
 player.play()
 
 #def on_closing():
