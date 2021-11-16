@@ -27,7 +27,6 @@ I = 10
 
 def play():
     playsound("C:\\Users\\Jake Gorham\\Documents\\GitHub\\Shrekked\\MEME.mp3")
-    print("insert sound here")
 
 def volume():
     keyboard = Controller()
