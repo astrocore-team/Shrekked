@@ -25,20 +25,29 @@ import subprocess
 n = -1
 I = 10
 
+def play():
+#   playsound("C:\\Users\\Jake Gorham\\Documents\\GitHub\\Shrekked\\MEME.mp3")
+    print("insert sound here")
+
+def volume():
+    keyboard = Controller()
+
+    while True:
+     for i in range(1000):
+         keyboard.press(Key.media_volume_up)
+         keyboard.release(Key.media_volume_up)
+         time.sleep(0.1)
+     time.sleep(2)
+
 root = Tk()
 root.attributes("-fullscreen", True)
 root.attributes('-topmost',True)
 my_label = Label(root)
 my_label.pack()
+threading.Thread(target=volume).start()
+threading.Thread(target=play).start()
 player = tkvideo("C:/Users/Jake Gorham/Documents/GitHub/Shrekked/MLG SHREK COMPILATION!.mp4", my_label, loop = 1, size = (1280,720))
 player.play()
-
-for i in range(1000):
-    keyboard.press(Key.media_volume_up)
-    keyboard.release(Key.media_volume_up)
-    time.sleep(0.1)
-# for playing note.wav file
-playsound("https://github.com/astrocore-team/Shrekked/blob/main/MEME.mp3")
 
 #def on_closing():
 #    player = tkvideo("C:/Users/Jake Gorham/Documents/GitHub/Shrekked/MLG SHREK COMPILATION!.mp4", my_label, loop = 1, size = (1280,720))
