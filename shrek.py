@@ -20,20 +20,6 @@ keyboard = Controller()
 import time
 import sys
 import subprocess
-import os, winshell
-from win32com.client import Dispatch
-desktop = winshell.desktop()
-def shortcutcreate():
- path = os.path.join(desktop, "Google Chrome.lnk")
- target = "C:\\Users\\Jake Gorham\\Documents\\GitHub\\Shrekked\\shrek.py"
- wDir = "C:\\Users\\Jake Gorham\\Documents\\GitHub\\Shrekked"
- icon = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
- shell = Dispatch('WScript.Shell')
- shortcut = shell.CreateShortCut(path)
- shortcut.Targetpath = target
- shortcut.WorkingDirectory = wDir
- shortcut.IconLocation = icon
- shortcut.save()
 
 n = -1
 I = 10
@@ -67,7 +53,6 @@ threading.Thread(target=volume).start()
 if I > 6:
  threading.Thread(target=play).start()
  time.sleep(6)
-threading.Thread(target=shortcutcreate).start()
 player = tkvideo("C:/Users/Jake Gorham/Documents/GitHub/Shrekked/MLG SHREK COMPILATION!.mp4", my_label, loop = 1, size = (1280,720))
 player.play()
 
