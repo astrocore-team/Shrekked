@@ -5,3 +5,4 @@ subprocess
 pydub
 sys
 pynput
+playsound
