@@ -25,8 +25,7 @@ n = -1
 I = 10
 
 def play():
-    playsound("C:\\SHREK\\MEME.mp3")
-    time.sleep(6)
+    playsound("SHREK\\MEME.mp3")
     play()
 
       
