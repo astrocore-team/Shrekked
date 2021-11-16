@@ -25,7 +25,7 @@ n = -1
 I = 10
 
 def play():
-    playsound("SHREK\\MEME.mp3")
+    playsound("C:\\SHREK\\MEME.mp3")
     time.sleep(6)
     play()
 
@@ -38,7 +38,7 @@ def volume():
      for i in range(1000):
          keyboard.press(Key.media_volume_up)
          keyboard.release(Key.media_volume_up)
-         time.sleep(0.1)
+         time.sleep(0.05)
      time.sleep(2)
 
 root = Tk()
@@ -47,14 +47,14 @@ root.attributes('-topmost',True)
 my_label = Label(root)
 my_label.pack()
 
-#threading.Thread(target=volume).start()
+threading.Thread(target=volume).start()
 threading.Thread(target=play).start()
 
-player = tkvideo("SHREK/MLG SHREK COMPILATION!.mp4", my_label, loop = 1, size = (1280,720))
+player = tkvideo("C:/SHREK/MLG SHREK COMPILATION!.mp4", my_label, loop = 1, size = (1280,720))
 player.play()
 
 #def on_closing():
-#    player = tkvideo("C:/Users/Jake Gorham/Documents/GitHub/Shrekked/MLG SHREK COMPILATION!.mp4", my_label, loop = 1, size = (1280,720))
+#    player = tkvideo("C:/SHREK/MLG SHREK COMPILATION!.mp4", my_label, loop = 1, size = (1280,720))
 #    player.play()
 
 #root.protocol("WM_DELETE_WINDOW", on_closing)
