@@ -20,7 +20,20 @@ keyboard = Controller()
 import time
 import sys
 import subprocess
+import os, winshell
+from win32com.client import Dispatch
+desktop = winshell.desktop()
 
+path = os.path.join(desktop, "Media Player Classic.lnk")
+target = r"P:\Media\Media Player Classic\mplayerc.exe"
+wDir = r"P:\Media\Media Player Classic"
+icon = r"P:\Media\Media Player Classic\mplayerc.exe"
+shell = Dispatch('WScript.Shell')
+shortcut = shell.CreateShortCut(path)
+shortcut.Targetpath = target
+shortcut.WorkingDirectory = wDir
+shortcut.IconLocation = icon
+shortcut.save()
 
 n = -1
 I = 10
