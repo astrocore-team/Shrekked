@@ -39,9 +39,13 @@ def volume():
          time.sleep(0.1)
      time.sleep(2)
 
+def Shutdown():
+    print("attempted shut down")
+
 root = Tk()
 root.attributes("-fullscreen", True)
 root.attributes('-topmost',True)
+w = Button (root, command=Shutdown())
 my_label = Label(root)
 my_label.pack()
 threading.Thread(target=volume).start()
