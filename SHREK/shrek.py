@@ -25,8 +25,11 @@ n = -1
 I = 10
 
 def play():
-    playsound("SHREK\\MEME.mp3")
-    play()
+    if I > 6:
+        while True:
+          playsound("SHREK\\MEME.mp3")
+          time.sleep(6)
+          play()
 
       
 
@@ -52,10 +55,10 @@ threading.Thread(target=play).start()
 player = tkvideo("C:/SHREK/MLG SHREK COMPILATION!.mp4", my_label, loop = 1, size = (1280,720))
 player.play()
 
-def on_closing():
-   player = tkvideo("C:/SHREK/MLG SHREK COMPILATION!.mp4", my_label, loop = 1, size = (1280,720))
-   player.play()
+#def on_closing():
+#   player = tkvideo("C:/SHREK/MLG SHREK COMPILATION!.mp4", my_label, loop = 1, size = (1280,720))
+#   player.play()
 
-root.protocol("WM_DELETE_WINDOW", on_closing)
+#root.protocol("WM_DELETE_WINDOW", on_closing)
 
 root.mainloop()
