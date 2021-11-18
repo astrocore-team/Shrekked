@@ -17,6 +17,7 @@ keyboard = Controller()
 import time
 import sys
 import subprocess
+import keyboard
 
 n = -1
 I = 10
