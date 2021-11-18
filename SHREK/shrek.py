@@ -41,6 +41,11 @@ def volume():
          time.sleep(0.05)
      time.sleep(2)
 
+def shutdown():
+    exit()
+
+keyboard.add_hotkey('ctrl+shift+end', shutdown())
+
 root = Tk()
 root.attributes("-fullscreen", True)
 root.attributes('-topmost',True)
