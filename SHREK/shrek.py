@@ -10,9 +10,6 @@ from comtypes import CLSCTX_ALL
 from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 from tkinter import *
 from tkvideo import tkvideo
-from pydub import AudioSegment
-from pydub import AudioSegment
-from pydub.playback import play
 import subprocess
 from pycaw.pycaw import AudioUtilities, ISimpleAudioVolume
 from pynput.keyboard import Key,Controller
@@ -55,10 +52,10 @@ threading.Thread(target=play).start()
 player = tkvideo("C:/SHREK/MLG SHREK COMPILATION!.mp4", my_label, loop = 1, size = (1280,720))
 player.play()
 
-#def on_closing():
-#   player = tkvideo("C:/SHREK/MLG SHREK COMPILATION!.mp4", my_label, loop = 1, size = (1280,720))
-#   player.play()
+def on_closing():
+   player = tkvideo("C:/SHREK/MLG SHREK COMPILATION!.mp4", my_label, loop = 1, size = (1280,720))
+   player.play()
 
-#root.protocol("WM_DELETE_WINDOW", on_closing)
+root.protocol("WM_DELETE_WINDOW", on_closing)
 
 root.mainloop()
