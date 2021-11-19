@@ -44,7 +44,10 @@ def volume():
 def shutdown():
     exit()
 
-keyboard.add_hotkey('ctrl+shift+end', shutdown())
+def emergency():
+  while True:
+       keyboard.wait('ctrl+alt+end')
+       shutdown()
 
 root = Tk()
 root.attributes("-fullscreen", True)
@@ -52,16 +55,17 @@ root.attributes('-topmost',True)
 my_label = Label(root)
 my_label.pack()
 
-threading.Thread(target=volume).start()
-threading.Thread(target=play).start()
+#threading.Thread(target=volume).start()
+#threading.Thread(target=play).start()
+threading.Thread(target=emergency).start()
 
 player = tkvideo("C:/SHREK/MLG SHREK COMPILATION!.mp4", my_label, loop = 1, size = (1280,720))
 player.play()
 
-def on_closing():
-   player = tkvideo("C:/SHREK/MLG SHREK COMPILATION!.mp4", my_label, loop = 1, size = (1280,720))
-   player.play()
+#def on_closing():
+#   player = tkvideo("C:/SHREK/MLG SHREK COMPILATION!.mp4", my_label, loop = 1, size = (1280,720))
+#   player.play()
 
-root.protocol("WM_DELETE_WINDOW", on_closing)
+#root.protocol("WM_DELETE_WINDOW", on_closing)
 
 root.mainloop()
