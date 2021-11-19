@@ -2,7 +2,12 @@ import os, winshell
 from win32com.client import Dispatch
 import shutil 
 import time
+import subprocess
 desktop = winshell.desktop()
+
+command_to_execute = ["python -r pip install C:\SHREK\requirements.txt"]
+
+run = subprocess.run(command_to_execute, capture_output=True)
 
 src = "SHREK"
 

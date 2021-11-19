@@ -1,8 +1,9 @@
 tkinter
 pycaw
 tkvideos
-subprocess
-pydub
-sys
 pynput
 playsound
+keyboard
+comtypes
+winshell
+subprocess
