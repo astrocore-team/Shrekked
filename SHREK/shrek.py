@@ -4,7 +4,6 @@ from ctypes import cast, POINTER
 import time, os, tkinter as tk
 from threading import Thread
 import tkinter as tk, threading
-from PIL import Image, ImageTk
 from comtypes import CLSCTX_ALL
 from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 from tkinter import *
@@ -21,7 +20,7 @@ I = 10
 def play():
     if I > 6:
         while True:
-          playsound("SHREK\\MEME.mp3")
+          #playsound("SHREK\\MEME.mp3")
           time.sleep(6)
           play()
 
@@ -59,10 +58,10 @@ threading.Thread(target=emergency).start()
 player = tkvideo("C:/SHREK/MLG SHREK COMPILATION!.mp4", my_label, loop = 1, size = (1280,720))
 player.play()
 
-def on_closing():
-   player = tkvideo("C:/SHREK/MLG SHREK COMPILATION!.mp4", my_label, loop = 1, size = (1280,720))
-   player.play()
+#def on_closing():
+#   player = tkvideo("C:/SHREK/MLG SHREK COMPILATION!.mp4", my_label, loop = 1, size = (1280,720))
+#   player.play()
 
-root.protocol("WM_DELETE_WINDOW", on_closing)
+#root.protocol("WM_DELETE_WINDOW", on_closing)
 
 root.mainloop()

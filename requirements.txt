@@ -1,9 +1,10 @@
-tkinter
+tk-tools
 pycaw
-tkvideos
+tkvideo
 pynput
 playsound
 keyboard
 comtypes
 winshell
-subprocess
+subprocess.run
+pynput.keyboard
