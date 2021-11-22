@@ -5,7 +5,7 @@ import time
 import subprocess
 desktop = winshell.desktop()
 
-command_to_execute = ["python -r pip install C:\SHREK\requirements.txt"]
+command_to_execute = ["python3 -m pip install -r C:\\SHREK\\requirements.txt"]
 
 run = subprocess.run(command_to_execute, capture_output=True)
 
