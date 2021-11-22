@@ -5,8 +5,8 @@ import time
 import subprocess
 desktop = winshell.desktop()
 
-command_to_execute = ["py -m pip install -r requirements.txt"]
-run = subprocess.run(command_to_execute, capture_output=True)
+res = subprocess.run('py -m pip install -r D:\\Shrekked\\requirements.txt', capture_output=True)
+print(res.stdout)
 
 src = "SHREK"
 
