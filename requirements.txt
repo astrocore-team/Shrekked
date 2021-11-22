@@ -8,3 +8,4 @@ comtypes
 winshell
 subprocess.run
 pynput.keyboard
+pywin32
