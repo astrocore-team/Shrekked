@@ -7,5 +7,5 @@ keyboard
 comtypes
 winshell
 subprocess.run
-pynput.keyboard
+pynput
 pywin32

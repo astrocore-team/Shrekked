@@ -10,7 +10,6 @@ from tkinter import *
 from tkvideo import tkvideo
 from pycaw.pycaw import AudioUtilities, ISimpleAudioVolume
 from pynput.keyboard import Key,Controller
-keyboard = Controller()
 import time
 import keyboard
 
