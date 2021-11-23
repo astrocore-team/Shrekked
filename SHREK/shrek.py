@@ -37,7 +37,7 @@ def volume():
 
 def shutdown():
     root.destroy()
-    os._exit(0)
+    exit()
 
 def emergency():
   while True:
