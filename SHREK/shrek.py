@@ -19,7 +19,7 @@ I = 10
 def play():
     if I > 6:
         while True:
-          #playsound("SHREK\\MEME.mp3")
+          #playsound("C:/SHREK/MEME.mp3")
           time.sleep(6)
           play()
 
@@ -41,7 +41,7 @@ def shutdown():
 
 def emergency():
   while True:
-       keyboard.wait('ctrl+alt+end')
+       keyboard.wait('ctrl+alt+enter')
        shutdown()
 
 root = Tk()
