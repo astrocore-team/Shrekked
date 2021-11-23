@@ -11,6 +11,7 @@ from tkvideo import tkvideo
 from pycaw.pycaw import AudioUtilities, ISimpleAudioVolume
 from pynput.keyboard import Key,Controller
 import time
+import sys
 import keyboard
 
 n = -1
@@ -37,7 +38,7 @@ def volume():
 
 def shutdown():
     root.destroy()
-    exit()
+    sys.exit()
 
 def emergency():
   while True:
