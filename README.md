@@ -4,4 +4,4 @@ An unclosable virus that sticks a video on your screen and locks it blasting a f
 You can close the virus by using the keybind 'Ctrl+Alt+Enter'
 ## Installation
 First download the zip file, click on releases and download it
-To properly install this virus first run First.sh, then run Setup.py and then everything is working.
+To properly install this virus first run First.sh in powershell, then run Setup.py and then everything is working.
