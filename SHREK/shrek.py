@@ -5,13 +5,10 @@ import time, os, tkinter as tk
 from threading import Thread
 import tkinter as tk, threading
 from comtypes import CLSCTX_ALL
-from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 from tkinter import *
 from tkvideo import tkvideo
-from pycaw.pycaw import AudioUtilities, ISimpleAudioVolume
 from pynput.keyboard import Key,Controller
 import time
-import sys
 import keyboard
 
 n = -1
@@ -31,14 +28,14 @@ def volume():
 
     while True:
      for i in range(1000):
-         keyboard.press(Key.media_volume_up)
-         keyboard.release(Key.media_volume_up)
+         #keyboard.press(Key.media_volume_up)
+         #keyboard.release(Key.media_volume_up)
          time.sleep(0.05)
      time.sleep(2)
 
 def shutdown():
     root.destroy()
-    sys.exit()
+    exit()
 
 def emergency():
   while True:
@@ -51,8 +48,8 @@ root.attributes('-topmost',True)
 my_label = Label(root)
 my_label.pack()
 
-threading.Thread(target=volume).start()
-threading.Thread(target=play).start()
+#threading.Thread(target=volume).start()
+#threading.Thread(target=play).start()
 threading.Thread(target=emergency).start()
 
 player = tkvideo("C:/SHREK/MLG SHREK COMPILATION!.mp4", my_label, loop = 1, size = (1280,720))

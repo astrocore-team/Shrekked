@@ -1,5 +1,4 @@
 tk-tools
-pycaw
 tkvideo
 pynput
 playsound
