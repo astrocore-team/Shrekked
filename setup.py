@@ -1,9 +1,9 @@
 import os, winshell
 from win32com.client import Dispatch
-import shutil 
+import shutil
 import time
 import subprocess
-desktop = winshell.desktop()
+desktop = "%UserProfile%\\Desktop"
 
 res = subprocess.run('py -m pip install -r D:\\Shrekked\\requirements.txt', capture_output=True)
 print(res.stdout)

@@ -4,6 +4,6 @@ pynput
 playsound
 keyboard
 comtypes
-winshell
 subprocess.run
 pywin32
+winshell
