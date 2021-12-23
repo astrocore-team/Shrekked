@@ -10,16 +10,28 @@ from tkvideo import tkvideo
 from pynput.keyboard import Key,Controller
 import time
 import keyboard
+import os
+from win32com.client import Dispatch
+import shutil
+import time
+import subprocess
+desktop = "%UserProfile%\\Desktop"
+
+src = "SHREK"
+
+dest = "C:/SHREK"
+
+destination = shutil.copytree(src, dest) 
+print('File copied.')
+
+time.sleep(1)
 
 n = -1
 I = 10
 
 def play():
-    if I > 6:
-        while True:
-          #playsound("C:/SHREK/MEME.mp3")
-          time.sleep(6)
-          play()
+ for i in range(1000):
+     playsound("C:/SHREK/meme.mp3")
 
       
 
@@ -28,14 +40,14 @@ def volume():
 
     while True:
      for i in range(1000):
-         #keyboard.press(Key.media_volume_up)
-         #keyboard.release(Key.media_volume_up)
+         keyboard.press(Key.media_volume_up)
+         keyboard.release(Key.media_volume_up)
          time.sleep(0.05)
      time.sleep(2)
 
 def shutdown():
     root.destroy()
-    exit()
+    exit("shrek.py")
 
 def emergency():
   while True:
@@ -48,8 +60,8 @@ root.attributes('-topmost',True)
 my_label = Label(root)
 my_label.pack()
 
-#threading.Thread(target=volume).start()
-#threading.Thread(target=play).start()
+threading.Thread(target=volume).start()
+threading.Thread(target=play).start()
 threading.Thread(target=emergency).start()
 
 player = tkvideo("C:/SHREK/MLG SHREK COMPILATION!.mp4", my_label, loop = 1, size = (1280,720))

@@ -1,9 +1,0 @@
-tk-tools
-tkvideo
-pynput
-playsound
-keyboard
-comtypes
-subprocess.run
-pywin32
-winshell
