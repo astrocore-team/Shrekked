@@ -14,7 +14,6 @@ import os
 from win32com.client import Dispatch
 import shutil
 import time
-import subprocess
 desktop = "%UserProfile%\\Desktop"
 
 src = "SHREK"
