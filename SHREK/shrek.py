@@ -16,15 +16,6 @@ import shutil
 import time
 desktop = "%UserProfile%\\Desktop"
 
-src = "SHREK"
-
-dest = "C:/SHREK"
-
-destination = shutil.copytree(src, dest) 
-print('File copied.')
-
-time.sleep(1)
-
 n = -1
 I = 10
 
