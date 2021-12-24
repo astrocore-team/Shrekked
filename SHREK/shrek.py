@@ -12,16 +12,20 @@ import time
 import keyboard
 import os
 from win32com.client import Dispatch
-import shutil
 import time
+import sys
+import shrek
 desktop = "%UserProfile%\\Desktop"
 
 n = -1
 I = 10
+should_play = True
 
 def play():
+ global should_play
  for i in range(1000):
-     playsound("C:/SHREK/meme.mp3")
+         if should_play == True:
+             playsound("C:/SHREK/meme.mp3")
 
       
 
@@ -36,8 +40,10 @@ def volume():
      time.sleep(2)
 
 def shutdown():
+    global should_play
     root.destroy()
-    exit("shrek.py")
+    should_play = False
+    quit()
 
 def emergency():
   while True:
@@ -54,7 +60,7 @@ threading.Thread(target=volume).start()
 threading.Thread(target=play).start()
 threading.Thread(target=emergency).start()
 
-player = tkvideo("C:/SHREK/MLG SHREK COMPILATION!.mp4", my_label, loop = 1, size = (1280,720))
+player = tkvideo("SHREK/MLG SHREK COMPILATION!.mp4", my_label, loop = 1, size = (1280,720))
 player.play()
 
 def on_closing():
