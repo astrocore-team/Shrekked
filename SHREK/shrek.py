@@ -44,7 +44,7 @@ def shutdown():
     global should_play
     root.destroy()
     should_play = False
-    quit()
+    quit(shrek)
 
 def emergency():
   while True:
