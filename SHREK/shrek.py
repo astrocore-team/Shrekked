@@ -19,6 +19,7 @@ desktop = "%UserProfile%\\Desktop"
 
 n = -1
 I = 10
+
 should_play = True
 
 def play():
