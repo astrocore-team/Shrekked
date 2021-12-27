@@ -16,11 +16,10 @@ desktop = "%UserProfile%\\Desktop"
 
 print(sys.path[0])
 
-sound = sys.path[0] + '\\meme.mp3'
 video = sys.path[0] + '\\MLG SHREK COMPILATION!.mp4'
 
 def play():
- playsound(sound)
+   playsound('SHREK\\meme.mp3')
 
       
 
