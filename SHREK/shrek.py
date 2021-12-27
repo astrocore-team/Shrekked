@@ -1,9 +1,7 @@
 from __future__ import print_function
 from playsound import playsound
-from ctypes import cast, POINTER
-import time, os, tkinter as tk
-from threading import Thread
-import tkinter as tk, threading
+import time
+import tkinter, threading
 from comtypes import CLSCTX_ALL
 from tkinter import *
 from tkvideo import tkvideo
@@ -11,20 +9,18 @@ from pynput.keyboard import Key,Controller
 import time
 import keyboard
 import os
+import sys
 from win32com.client import Dispatch
 import time
-import sys
-import shrek
-import shutil
-import pathlib
 desktop = "%UserProfile%\\Desktop"
 
-should_play = True
+print(sys.path[0])
+
+sound = sys.path[0] + '\\meme.mp3'
+video = sys.path[0] + '\\MLG SHREK COMPILATION!.mp4'
 
 def play():
- global should_play
- for i in range(1000):
-     playsound('SHREK\\Files\\meme.mp3')
+ playsound(sound)
 
       
 
@@ -39,10 +35,8 @@ def volume():
      time.sleep(2)
 
 def shutdown():
-    global should_play
     root.destroy()
-    should_play = False
-    quit(shrek)
+    quit()
 
 def emergency():
   while True:
@@ -55,15 +49,15 @@ root.attributes('-topmost',True)
 my_label = Label(root)
 my_label.pack()
 
+threading.Thread(target=play).start()
 threading.Thread(target=volume).start()
 threading.Thread(target=emergency).start()
-threading.Thread(target=play).start()
 
-player = tkvideo('SHREK\\Files\\MLG SHREK COMPILATION!.mp4', my_label, loop = 1, size = (1280,720))
+player = tkvideo(video, my_label, loop = 1, size = (1280,720))
 player.play()
 
 def on_closing():
-   player = tkvideo('SHREK\\Files\\MLG SHREK COMPILATION!.mp4', my_label, loop = 1, size = (1280,720))
+   player = tkvideo(video, my_label, loop = 1, size = (1280,720))
    player.play()
 
 root.protocol("WM_DELETE_WINDOW", on_closing)
