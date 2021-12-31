@@ -1,4 +1,5 @@
 from __future__ import print_function
+from genericpath import exists
 from playsound import playsound
 import time
 import tkinter, threading
@@ -29,6 +30,8 @@ except OSError:
 else:
     print ("Successfully created the directory %s " % path)
 
+print("Preparing for launch.")
+
 
 video = "C:/Shrek_Files/meme.mp4"
 sound = "C:/Shrek_Files/meme.mp3"
@@ -41,10 +44,19 @@ with open("C:/Shrek_Files/meme.mp4", 'wb') as local:
   with urlopen(url2) as remote:
     local.write(remote.read())
 
-time.sleep(5)
+time.sleep(1)
+print('Starting in 5')
+time.sleep(1)
+print('Starting in 4')
+time.sleep(1)
+print('Starting in 3')
+time.sleep(1)
+print('Starting in 2')
+time.sleep(1)
+print('Starting in 1')
 
 def play():
- while True:
+  while True:
       playsound(sound)
 
 def volume():
