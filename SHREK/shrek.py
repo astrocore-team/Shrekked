@@ -12,16 +12,40 @@ import os
 import sys
 from win32com.client import Dispatch
 import time
+import urllib
+from urllib.request import urlopen
+
 desktop = "%UserProfile%\\Desktop"
 
-print(sys.path[0])
+path = "C:/Shrek_Files"
+url = "https://astrocore.net/gallery/meme.mp3"
+url2 = "https://astrocore.net/gallery/meme-ts1640990550.mp4"
 
-video = sys.path[0] + '\\MLG SHREK COMPILATION!.mp4'
+try:
+    os.mkdir(path)
+except OSError:
+    print ("Creation of the directory %s failed" % path)
+    print ("(Does it already exist?)")
+else:
+    print ("Successfully created the directory %s " % path)
+
+
+video = "C:/Shrek_Files/meme.mp4"
+sound = "C:/Shrek_Files/meme.mp3"
+
+with open("C:/Shrek_Files/meme.mp3", 'wb') as local:
+  with urlopen(url) as remote:
+    local.write(remote.read())
+
+with open("C:/Shrek_Files/meme.mp4", 'wb') as local:
+  with urlopen(url2) as remote:
+    local.write(remote.read())
+
+time.sleep(2)
 
 def play():
-   playsound('SHREK/meme.mp3')
-
-      
+ while True:
+      playsound(sound)
 
 def volume():
     keyboard = Controller()
