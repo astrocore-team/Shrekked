@@ -19,7 +19,7 @@ print(sys.path[0])
 video = sys.path[0] + '\\MLG SHREK COMPILATION!.mp4'
 
 def play():
-   playsound('SHREK\\meme.mp3')
+   playsound('SHREK/meme.mp3')
 
       
 
