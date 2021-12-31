@@ -41,7 +41,7 @@ with open("C:/Shrek_Files/meme.mp4", 'wb') as local:
   with urlopen(url2) as remote:
     local.write(remote.read())
 
-time.sleep(2)
+time.sleep(5)
 
 def play():
  while True:
