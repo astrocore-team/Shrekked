@@ -51,6 +51,7 @@ sound = "C:/Shrek_Files/meme.mp3"
 if file2.exists():
     print("File exists. Skipping Download")
 else:
+    print("Downloading " + url)
     with open("C:/Shrek_Files/meme.mp3", 'wb') as local:
         with urlopen(url) as remote:
             local.write(remote.read())
@@ -58,6 +59,7 @@ else:
 if file1.exists():
     print("File exists. Skipping Download")
 else:
+    print("Downloading " + url2)
     with open("C:/Shrek_Files/meme.mp4", 'wb') as local:
         with urlopen(url2) as remote:
             local.write(remote.read())
@@ -79,7 +81,7 @@ print('Starting in 1')
 
 def play():
  while True:
-      playsound(sound)
+       playsound(sound)
 
 # Change volume
 
