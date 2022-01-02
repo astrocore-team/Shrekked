@@ -1,6 +1,7 @@
 # Shrekked
-An unclosable virus that sticks a video on your screen and locks it blasting a funny shrek video on full volume with moaning sound.
-## Closing it
-You can close the virus by using the keybind 'Ctrl+Alt+Enter'
+**A Troll virus that sticks a Shrek video on fullscreen while locking your mouse and playing obnoxius sound effects!**
+<p style="text-align:center;"><img src="https://github.com/astrocore-team/Shrekked/blob/main/Assets/shrek.png?raw=true" alt="Logo" style="height: 200px; width:800px;"></p>
+
 ## Installation
-First go to https://astrocore.net/Shrekked/ and click download. Next extract the folder, run the exe and download.
+1. go to [Astrocore Site](https://astrocore.net/shrekked) or click on the right side of the github where it says releases and download Shrekked Virus Latest Version
+2. open the ``Shrekked.zip``
