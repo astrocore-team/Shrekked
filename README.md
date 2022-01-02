@@ -4,6 +4,7 @@
 
 ## Installation
 1. go to [Astrocore Site](https://astrocore.net/shrekked) or click on the right side of the github where it says releases and download Shrekked Virus Latest Version
+2. open the ``Shrekked.zip``
 
 
 
