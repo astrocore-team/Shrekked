@@ -3,7 +3,7 @@
 <p style="text-align:center;"><img src="https://github.com/astrocore-team/Shrekked/blob/main/Assets/shrek.png?raw=true" alt="Logo" style="height: 200px; width:800px;"></p>
 
 ## Installation
-1. go to [Astrocore Site](https://astrocore.net/Shrekked/) or click on the right side of the github where it says releases and download Shrekked Virus Latest Version
+1. go to <a href="http://astrocore.net" target="_blank">Hello, world!</a> or click on the right side of the github where it says releases and download Shrekked Virus Latest Version
 
 
 
