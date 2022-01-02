@@ -7,3 +7,12 @@
 1. go to [Astrocore Site](https://astrocore.net/shrekked) or click on the right side of the github where it says releases and download Shrekked Virus Latest Version
 2. Extract the ``shrekked installer.zip`` and run ``shrekked installer.exe`` Follow the steps and choose downloads as your path. 
 3. Once installed run ``shrek.exe``. 
+4. it will open a console and begin a countdown shortly after execution.
+
+## Keybinds
+``Ctrl`` + ``alt`` + ``enter`` will close the video, then just close the console to stop the virus completely!.
+
+## Bugs or errors
+If you got any bugs you want to report you can join our [Discord](https://discord.gg/8aVJtkpk2j) or go to **Issues** on our github repository and file an issue!
+or if your fimiliar with python make a couple edits on our ``Shrek.py`` and send us a pull request!.
+
