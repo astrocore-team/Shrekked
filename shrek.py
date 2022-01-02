@@ -16,6 +16,9 @@ from urllib.request import urlopen
 import pyautogui
 from pathlib import Path
 
+keyboard.add_hotkey("alt + f4", lambda: None, suppress =True)
+keyboard.add_hotkey("alt + tab", lambda: None, suppress =True)
+
 pyautogui.FAILSAFE = False
 
 # Find monitor width/height
