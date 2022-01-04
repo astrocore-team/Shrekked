@@ -16,3 +16,15 @@
 If you got any bugs you want to report you can join our [Discord](https://discord.gg/8aVJtkpk2j) or go to **Issues** on our github repository and file an issue!
 or if your fimiliar with python make a couple edits on our ``Shrek.py`` and send us a pull request!.
 
+## Tutorial
+Here's a youtube tutorial on how to install shrekked virus! 
+<iframe
+    width="640"
+    height="480"
+    src="https://www.youtube.com/embed/UmX4kyB2wfg"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen
+>
+</iframe>
+
