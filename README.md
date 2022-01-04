@@ -18,5 +18,5 @@ or if your fimiliar with python make a couple edits on our ``Shrek.py`` and send
 
 ## Tutorial
 Here's a youtube tutorial on how to install shrekked virus!
-[<span style="color: red;">Shrekked Virus Tutorial</span>](https://astrocore.net/shrekked)
+[Shrekked Virus Tutorial](https://www.youtube.com/watch?v=WYsm0LeG_bM)
 
