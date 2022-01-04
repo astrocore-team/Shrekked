@@ -25,6 +25,5 @@ Here's a youtube tutorial on how to install shrekked virus!
     frameborder="0"
     allow="autoplay; encrypted-media"
     allowfullscreen
->
 </iframe>
 
