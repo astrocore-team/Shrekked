@@ -17,13 +17,6 @@ If you got any bugs you want to report you can join our [Discord](https://discor
 or if your fimiliar with python make a couple edits on our ``Shrek.py`` and send us a pull request!.
 
 ## Tutorial
-Here's a youtube tutorial on how to install shrekked virus! 
-<iframe
-    width="640"
-    height="480"
-    src="https://www.youtube.com/embed/UmX4kyB2wfg"
-    frameborder="0"
-    allow="autoplay; encrypted-media"
-    allowfullscreen
-</iframe>
+Here's a youtube tutorial on how to install shrekked virus!
+<a href="https://www.youtube.com/watch?v=WYsm0LeG_bM" title="Shrekked Virus Tutorial"><img src="https://i.postimg.cc/7h4jS3vd/shrekkedtutorial.jpg" alt="Shrekked Virus Tutorial" /></a>
 
