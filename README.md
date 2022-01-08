@@ -1,5 +1,5 @@
 # Shrekked
-![Discord](https://img.shields.io/discord/894937415607779349?label=Discord%20Server&logo=Discord)
+![Discord](https://img.shields.io/discord/894937415607779349?label=Discord%20Server&logo=Discord) ![GitHub repo size](https://img.shields.io/github/repo-size/astrocore-team/shrekked?label=Repository%20size&logo=github)
 
 **A Windows OS Troll virus that sticks a Shrek video on fullscreen while locking your mouse and playing obnoxius sound effects!**
 
