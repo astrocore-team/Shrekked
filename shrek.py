@@ -156,3 +156,4 @@ root.protocol("WM_DELETE_WINDOW", on_closing)
 print("Close this console to shutdown Virus!")
 
 root.mainloop()
+sus
